@@ -39,7 +39,7 @@ jobs:
         echo "- E2E Tests: $(npm run test:e2e -- --json | jq '.numPassedTests') passed" >> reports/testrun_$(date +%Y-%m-%d).md
     
     - name: Upload test artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-reports
         path: |
